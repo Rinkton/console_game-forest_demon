@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    public class Tested
+    class Player
     {
-        public int GetFive()
-        {
-            return 5;
-        }
     }
 }

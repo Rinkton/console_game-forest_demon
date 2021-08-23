@@ -8,8 +8,7 @@ namespace Tests
         [Fact]
         public void Test()
         {
-            Tested tested = new Tested();
-            Assert.Equal(5, tested.GetFive());
+            Assert.Equal(5, 5);
         }
     }
 }
