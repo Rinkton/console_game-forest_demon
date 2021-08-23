@@ -61,11 +61,65 @@ namespace Game {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Жил был.
+        /// </summary>
+        internal static string preamble0 {
+            get {
+                return ResourceManager.GetString("preamble0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Не очень,.
+        /// </summary>
+        internal static string preamble1 {
+            get {
+                return ResourceManager.GetString("preamble1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Но нормально!.
+        /// </summary>
+        internal static string preamble2 {
+            get {
+                return ResourceManager.GetString("preamble2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Тест.
         /// </summary>
         internal static string test {
             get {
                 return ResourceManager.GetString("test", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Тест0.
+        /// </summary>
+        internal static string test0 {
+            get {
+                return ResourceManager.GetString("test0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Тест1.
+        /// </summary>
+        internal static string test1 {
+            get {
+                return ResourceManager.GetString("test1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Тест2.
+        /// </summary>
+        internal static string test2 {
+            get {
+                return ResourceManager.GetString("test2", resourceCulture);
             }
         }
     }
