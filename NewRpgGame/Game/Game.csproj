@@ -43,10 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Text.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="text.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>text.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -59,6 +65,12 @@
     <Folder Include="Menus\" />
     <Folder Include="StoryTellings\" />
     <Folder Include="Weapons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="text.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>text.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
