@@ -12,7 +12,6 @@ namespace Game
         static void Main(string[] args)
         {
             //TODO: Menu of choice whether read preamble
-            //TODO: Replace standard string recources with something else's
             new StoryTellings.Preamble().Run();
         }
     }

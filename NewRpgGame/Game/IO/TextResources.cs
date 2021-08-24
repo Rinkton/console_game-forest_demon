@@ -9,17 +9,24 @@ namespace Game.IO
 {
     public static class TextResources
     {
+        private static string text;
+
+        static TextResources()
+        {
+            string rawText = resources.text;
+            byte[] bytes = Encoding.Default.GetBytes(rawText);
+            string cyrillicText = Encoding.UTF8.GetString(bytes);
+
+            text = cyrillicText;
+        }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="resourceName">Имя ресурса, содержащегося в файле text.csv в колонке resourceName</param>
         public static string GetStringByResourceName(string resourceName)
         {
-            string rawText = resources.text;
-            byte[] bytes = Encoding.Default.GetBytes(rawText);
-            string cyrillicText = Encoding.UTF8.GetString(bytes);
-
-            string[] rows = cyrillicText.Split(new[] { "\r\n" }, StringSplitOptions.None);
+            string[] rows = text.Split(new[] { "\r\n" }, StringSplitOptions.None);
             foreach(string row in rows)
             {
                 string[] columns = row.Split(';');

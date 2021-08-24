@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleWriter.cs" />
+    <Compile Include="GameEvents\Event.cs" />
+    <Compile Include="Menus\Components\Arrangement.cs" />
+    <Compile Include="Menus\Components\Choice.cs" />
+    <Compile Include="Menus\Components\Delimeter.cs" />
+    <Compile Include="Menus\Menu.cs" />
     <Compile Include="StoryTellings\Preamble.cs" />
     <Compile Include="StoryTellings\StoryTell.cs" />
     <Compile Include="IO\TextResources.cs" />
@@ -55,6 +61,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Str.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -63,8 +70,6 @@
   <ItemGroup>
     <Folder Include="Armors\" />
     <Folder Include="Enemies\" />
-    <Folder Include="Events\" />
-    <Folder Include="Menus\" />
     <Folder Include="Weapons\" />
   </ItemGroup>
   <ItemGroup>
