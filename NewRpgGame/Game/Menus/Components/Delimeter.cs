@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Game.Menus.Components
 {
-    /// <summary>
-    /// Имеет string, который разделяет список на разделы и число, на котором этот список должен разделиться
-    /// </summary>
-    public class Delimeter
+    public class Section
     {
         public readonly Str Str;
 
+        /// <summary>
+        /// Номер элемента списка, перед коим и будет раздел
+        /// </summary>
         public readonly int Number;
 
         /// <summary>
@@ -20,7 +20,7 @@ namespace Game.Menus.Components
         /// </summary>
         /// <param name="str"></param>
         /// <param name="number">Число, на котором список должен быть разделён строкой Str</param>
-        public Delimeter(Str str, int number)
+        public Section(Str str, int number)
         {
             Str = str;
             Number = number;

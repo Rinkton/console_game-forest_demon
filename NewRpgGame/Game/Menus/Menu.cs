@@ -9,7 +9,7 @@ namespace Game.Menus
     public class Menu
     {
         public string GetMenu(Components.Choice[] choices, string description=null,
-        Components.Delimeter[] delimeters=null, 
+        Components.Section[] delimeters=null, 
         Components.Arrangement arrangement=Components.Arrangement.InList, int number=1)
         {
             StringBuilder menuText = new StringBuilder();
@@ -19,7 +19,7 @@ namespace Game.Menus
                 menuText.Append(description + "\n" + "\n");
             }
 
-            return null;
+            return "1) first";
         }
     }
 }
