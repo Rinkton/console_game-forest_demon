@@ -22,14 +22,14 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class text {
+    internal class resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal text() {
+        internal resources() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Game {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Game.text", typeof(text).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Game.resources", typeof(resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,65 +61,11 @@ namespace Game {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Жил был.
+        ///   Ищет локализованную строку, похожую на PK!|ll [Content_Types].xml ў(  [остаток строки не уместился]&quot;;.
         /// </summary>
-        internal static string preamble0 {
+        internal static string text {
             get {
-                return ResourceManager.GetString("preamble0", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Не очень,.
-        /// </summary>
-        internal static string preamble1 {
-            get {
-                return ResourceManager.GetString("preamble1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Но нормально!.
-        /// </summary>
-        internal static string preamble2 {
-            get {
-                return ResourceManager.GetString("preamble2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Тест.
-        /// </summary>
-        internal static string test {
-            get {
-                return ResourceManager.GetString("test", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Тест0.
-        /// </summary>
-        internal static string test0 {
-            get {
-                return ResourceManager.GetString("test0", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Тест1.
-        /// </summary>
-        internal static string test1 {
-            get {
-                return ResourceManager.GetString("test1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Тест2.
-        /// </summary>
-        internal static string test2 {
-            get {
-                return ResourceManager.GetString("test2", resourceCulture);
+                return ResourceManager.GetString("text", resourceCulture);
             }
         }
     }

@@ -117,25 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="preamble0" xml:space="preserve">
-    <value>Жил был</value>
-  </data>
-  <data name="preamble1" xml:space="preserve">
-    <value>Не очень,</value>
-  </data>
-  <data name="preamble2" xml:space="preserve">
-    <value>Но нормально!</value>
-  </data>
-  <data name="test" xml:space="preserve">
-    <value>Тест</value>
-  </data>
-  <data name="test0" xml:space="preserve">
-    <value>Тест0</value>
-  </data>
-  <data name="test1" xml:space="preserve">
-    <value>Тест1</value>
-  </data>
-  <data name="test2" xml:space="preserve">
-    <value>Тест2</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="text" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>text.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
   </data>
 </root>
