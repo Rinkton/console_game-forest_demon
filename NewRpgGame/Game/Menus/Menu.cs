@@ -8,18 +8,72 @@ namespace Game.Menus
 {
     public class Menu
     {
+        //TODO: GetMenu должен возвращать Str-ы а не стринг, ЦВЕТА, не забывай(и удалить тест придётся...)
+        //TODO: Разделить бы всё на engine и game и Game переименовать
         public string GetMenu(Components.Choice[] choices, string description=null,
-        Components.Section[] delimeters=null, 
-        Components.Arrangement arrangement=Components.Arrangement.InList, int number=1)
+        Components.Section[] sections=null, 
+        Components.Arrangement arrangement=Components.Arrangement.InList, int startNumber=1)
         {
             StringBuilder menuText = new StringBuilder();
 
-            if(description != null)
+            #region description
+            if (description != null)
             {
                 menuText.Append(description + "\n" + "\n");
             }
+            #endregion
 
-            return "1) first";
+            int i = startNumber;
+            foreach(Components.Choice choice in choices)
+            {
+                #region sections
+                if(sections != null)
+                {
+                    foreach (Components.Section section in sections)
+                    {
+                        if (section.Number == i)
+                        {
+                            if(i != startNumber)
+                            {
+                                switch (arrangement)
+                                {
+                                    case Components.Arrangement.InList:
+                                        menuText.Append("\n");
+                                        break;
+                                    case Components.Arrangement.InLine:
+                                        menuText.Append("\n\n");
+                                        break;
+                                }
+                            }
+                            menuText.Append(section.Str.Text);
+                            menuText.Append("\n");
+                        }
+                    }
+                }
+                #endregion
+
+                #region choices
+                menuText.Append(i + ") " + choice.Str.Text);
+                #endregion
+
+                #region arrangement
+                if (choices.Length != i)
+                {
+                    switch (arrangement)
+                    {
+                        case Components.Arrangement.InList:
+                            menuText.Append("\n");
+                            break;
+                        case Components.Arrangement.InLine:
+                            menuText.Append("    ");
+                            break;
+                    }
+                }
+                #endregion
+                i++;
+            }
+
+            return menuText.ToString();
         }
     }
 }

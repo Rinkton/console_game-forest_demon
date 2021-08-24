@@ -5,25 +5,6 @@ namespace Tests.Menus
 {
     public class Menu
     {
-        /*
-        [Theory]
-        [MemberData(nameof(getMenuMember0))]
-        [MemberData(nameof(getMenuMember1))]
-        [MemberData(nameof(getMenuMember2))]
-        [MemberData(nameof(getMenuMember3))]
-        [MemberData(nameof(getMenuMember4))]
-        [MemberData(nameof(getMenuMember5))]
-        [MemberData(nameof(getMenuMember6))]
-        public void GetMenu
-        (string expected, Game.Menus.Components.Choice[] given1,
-        string given2 = null, Game.Menus.Components.Delimeter[] given3 = null,
-        Game.Menus.Components.Arrangement given4 = Game.Menus.Components.Arrangement.InList)
-        {
-            var actual = new Game.Menus.Menu().GetMenu(given1, given2, given3, given4);
-            Assert.Equal(actual, expected);
-        }
-        */
-
         [Fact]
         public void getMenuMember0()
         {
@@ -82,7 +63,7 @@ namespace Tests.Menus
                     "section\n" +
                     "1) a\n" +
                     "2) b\n" +
-                    "3) c\n";
+                    "3) c";
             string actual = new Game.Menus.Menu().GetMenu(
                 new Game.Menus.Components.Choice[]
                     {
@@ -102,7 +83,7 @@ namespace Tests.Menus
         {
             string expected = "description\n\n" +
                     "section\n" +
-                    "1) a" + "    " + "2) b" + "    " + "3) c" + "    ";
+                    "1) a" + "    " + "2) b" + "    " + "3) c";
             string actual = new Game.Menus.Menu().GetMenu(
                 new Game.Menus.Components.Choice[]
                     {
@@ -124,7 +105,7 @@ namespace Tests.Menus
             string expected = "description\n\n" +
                     "1) a" + "    " +
                     "\n\n" + "section" + "\n" +
-                    "2) b" + "    " + "3) c" + "    ";
+                    "2) b" + "    " + "3) c";
             string actual = new Game.Menus.Menu().GetMenu(
                 new Game.Menus.Components.Choice[]
                     {

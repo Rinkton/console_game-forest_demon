@@ -19,7 +19,7 @@ namespace Game.StoryTellings
             foreach(string str in strings)
             {
                 Console.Clear();
-                ConsoleWriter.WriteLine(str);
+                ConsoleWriter.WriteLine(new Str(str));
                 Console.ReadKey();
             }
         }
