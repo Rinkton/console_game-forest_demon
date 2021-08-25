@@ -9,17 +9,16 @@ namespace Game.Menus
     public class Menu
     {
         //TODO: GetMenu должен возвращать Str-ы а не стринг, ЦВЕТА, не забывай(и удалить тест придётся...)
-        //TODO: Разделить бы всё на engine и game и Game переименовать
-        public string GetMenu(Components.Choice[] choices, string description=null,
+        public Str[] GetMenu(Components.Choice[] choices, string description=null,
         Components.Section[] sections=null, 
         Components.Arrangement arrangement=Components.Arrangement.InList, int startNumber=1)
         {
-            StringBuilder menuText = new StringBuilder();
+            List<Str> strList = new List<Str>();
 
             #region description
             if (description != null)
             {
-                menuText.Append(description + "\n" + "\n");
+                strList.Add(new Str(description + "\n" + "\n"));
             }
             #endregion
 
@@ -38,22 +37,23 @@ namespace Game.Menus
                                 switch (arrangement)
                                 {
                                     case Components.Arrangement.InList:
-                                        menuText.Append("\n");
+                                        strList.Add(new Str("\n"));
                                         break;
                                     case Components.Arrangement.InLine:
-                                        menuText.Append("\n\n");
+                                        strList.Add(new Str("\n\n"));
                                         break;
                                 }
                             }
-                            menuText.Append(section.Str.Text);
-                            menuText.Append("\n");
+                            strList.Add(section.Str);
+                            strList.Add(new Str("\n"));
                         }
                     }
                 }
                 #endregion
 
                 #region choices
-                menuText.Append(i + ") " + choice.Str.Text);
+                strList.Add(new Str(i + ") "));
+                strList.Add(choice.Str);
                 #endregion
 
                 #region arrangement
@@ -62,10 +62,10 @@ namespace Game.Menus
                     switch (arrangement)
                     {
                         case Components.Arrangement.InList:
-                            menuText.Append("\n");
+                            strList.Add(new Str("\n"));
                             break;
                         case Components.Arrangement.InLine:
-                            menuText.Append("    ");
+                            strList.Add(new Str("    "));
                             break;
                     }
                 }
@@ -73,7 +73,7 @@ namespace Game.Menus
                 i++;
             }
 
-            return menuText.ToString();
+            return strList.ToArray();
         }
     }
 }

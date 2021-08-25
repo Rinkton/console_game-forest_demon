@@ -19,5 +19,17 @@ namespace Game
             Console.ForegroundColor = str.Color;
             Console.WriteLine(str.Text);
         }
+
+        /// <summary>
+        /// Пишет в консоль все Str-s по порядку с помощью здешнего метода <see cref="Write(Str)"/>
+        /// </summary>
+        /// <param name="strs"></param>
+        public static void WriteStrs(Str[] strs)
+        {
+            foreach(Str str in strs)
+            {
+                Write(str);
+            }
+        }
     }
 }
