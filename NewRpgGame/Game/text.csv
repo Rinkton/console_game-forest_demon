@@ -7,3 +7,6 @@ preamble0;Жил, был
 preamble1;не очень.
 preamble2;Но всё равно хорошо
 preamble3;Ок
+yes;Да
+no;Нет
+want preamble;Вы хотите прочитать предысторию?

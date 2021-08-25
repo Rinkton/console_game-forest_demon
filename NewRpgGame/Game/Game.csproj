@@ -44,11 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleWriter.cs" />
-    <Compile Include="GameEvents\Event.cs" />
+    <Compile Include="GameEvents\GameEvent.cs" />
+    <Compile Include="GameEvents\ToMainMenu.cs" />
+    <Compile Include="GameEvents\ToPreamble.cs" />
     <Compile Include="Menus\Components\Arrangement.cs" />
     <Compile Include="Menus\Components\Choice.cs" />
     <Compile Include="Menus\Components\Delimeter.cs" />
     <Compile Include="Menus\Menu.cs" />
+    <Compile Include="Menus\ReadPreamble.cs" />
     <Compile Include="StoryTellings\Preamble.cs" />
     <Compile Include="StoryTellings\StoryTell.cs" />
     <Compile Include="IO\TextResources.cs" />

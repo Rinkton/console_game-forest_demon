@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Game.GameEvents
 {
-    public class GameEvent
+    class ToPreamble : GameEvent
     {
+        public void Run()
+        {
+            new StoryTellings.Preamble().Run();
+        }
     }
 }

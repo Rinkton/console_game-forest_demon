@@ -11,7 +11,6 @@ namespace Game.StoryTellings
         public void Run()
         {
             string resourceGroupName = "preamble";
-            string[] strings = IO.TextResources.GetStringsByResourceGroupName(resourceGroupName);
             base.Run(resourceGroupName);
         }
     }
