@@ -47,6 +47,10 @@
     <Compile Include="GameEvents\GameEvent.cs" />
     <Compile Include="GameEvents\ToMainMenu.cs" />
     <Compile Include="GameEvents\ToPreamble.cs" />
+    <Compile Include="Items\Armors\Armor.cs" />
+    <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\Necklets\Necklet.cs" />
+    <Compile Include="Items\Weapons\Weapon.cs" />
     <Compile Include="Menus\Components\Arrangement.cs" />
     <Compile Include="Menus\Components\Choice.cs" />
     <Compile Include="Menus\Components\Delimeter.cs" />
@@ -71,9 +75,7 @@
     <None Include="text.csv" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Armors\" />
     <Folder Include="Enemies\" />
-    <Folder Include="Weapons\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="resources.resx">
