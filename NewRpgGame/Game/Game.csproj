@@ -44,7 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleWriter.cs" />
+    <Compile Include="GameEvents\ContinueGame.cs" />
+    <Compile Include="GameEvents\ExitGame.cs" />
     <Compile Include="GameEvents\GameEvent.cs" />
+    <Compile Include="GameEvents\NewGame.cs" />
     <Compile Include="GameEvents\ToMainMenu.cs" />
     <Compile Include="GameEvents\ToPreamble.cs" />
     <Compile Include="Items\Armors\Armor.cs" />
@@ -54,6 +57,7 @@
     <Compile Include="Menus\Components\Arrangement.cs" />
     <Compile Include="Menus\Components\Choice.cs" />
     <Compile Include="Menus\Components\Delimeter.cs" />
+    <Compile Include="Menus\MainMenu.cs" />
     <Compile Include="Menus\Menu.cs" />
     <Compile Include="Menus\ReadPreamble.cs" />
     <Compile Include="StoryTellings\Preamble.cs" />

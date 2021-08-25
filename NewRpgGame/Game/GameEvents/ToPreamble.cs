@@ -11,6 +11,7 @@ namespace Game.GameEvents
         public void Run()
         {
             new StoryTellings.Preamble().Run();
+            new ToMainMenu().Run();
         }
     }
 }

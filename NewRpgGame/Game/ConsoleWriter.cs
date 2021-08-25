@@ -21,6 +21,16 @@ namespace Game
         }
 
         /// <summary>
+        /// Работает как и <see cref="WriteLine(Str)"/>, но добавляет дополнительный перенос строки
+        /// </summary>
+        /// <param name="str"></param>
+        public static void WriteLineWithLineBreak(Str str)
+        {
+            Console.ForegroundColor = str.Color;
+            Console.WriteLine(str.Text + "\n");
+        }
+
+        /// <summary>
         /// Пишет в консоль все Str-s по порядку с помощью здешнего метода <see cref="Write(Str)"/>
         /// </summary>
         /// <param name="strs"></param>
