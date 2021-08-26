@@ -8,7 +8,6 @@ namespace Game.Items
 {
     abstract class Item
     {
-        //TODO: Сделать обязательные параметры в конструкторе
         /// <summary>
         /// Событие, которое происходит при надевании(создании экземпляра) предмета
         /// </summary>
@@ -20,8 +19,11 @@ namespace Game.Items
         /// </summary>
         public readonly GameEvents.GameEvent Using;
 
-        public Item()
+        public Item(GameEvents.GameEvent wearing, GameEvents.GameEvent @using)
         {
+            Wearing = wearing;
+            Using = @using;
+
             Wearing.Run();
         }
 

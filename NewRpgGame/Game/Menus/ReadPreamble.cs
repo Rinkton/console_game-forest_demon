@@ -13,14 +13,20 @@ namespace Game.Menus
     {
         public void Run()
         {
-            base.Run(
+            Components.Choice[] choices =
                 new Components.Choice[]
                 {
                     new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("yes")), new GameEvents.ToPreamble()),
                     new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("no")), new GameEvents.ToMainMenu()),
-                },
-                IO.TextResources.GetStringByResourceName("want preamble")
+                };
+            int startNumber = 1;
+
+            base.Visualize(
+                choices,
+                IO.TextResources.GetStringByResourceName("want preamble"),
+                startNumber:startNumber
                 );
+            InputProcessing.RunChoice(choices, startNumber);
         }
     }
 }

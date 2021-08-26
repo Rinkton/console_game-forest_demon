@@ -8,7 +8,7 @@ namespace Game.Menus
 {
     public class Menu
     {
-        protected void Run(Components.Choice[] choices, string description=null,
+        protected void Visualize(Components.Choice[] choices, string description=null,
         Components.Section[] sections=null, 
         Components.Arrangement arrangement=Components.Arrangement.InList, int startNumber=1)
         {
@@ -74,39 +74,7 @@ namespace Game.Menus
             }
             strList.Add(new Str("\n"));
 
-            Console.Clear();
             ConsoleWriter.WriteStrs(strList.ToArray());
-
-            string input = Console.ReadLine();
-            bool isNotEmpty = input != "";
-            bool isNumber = input.Length == input.Where(c => char.IsDigit(c)).Count();
-            bool inRange = false;
-            if (isNotEmpty && isNumber)
-            {
-                int choiceNumber = Convert.ToInt32(input) - startNumber;
-                inRange = choiceNumber >= 0 && choiceNumber < choices.Length;
-                if(inRange)
-                {
-                    choices[choiceNumber].GameEvent.Run();
-                }
-            }
-            //TODO: Сделать firstString и ласт стринг
-
-            //Если ввод некорректен, то перезапускаем меню.
-            //Условие здесь для того, чтобы если игровое событие сделает return,
-            //то всё бы не зацикливалось.
-            if(!(isNotEmpty && isNumber && inRange))
-            {
-                Run(choices, description, sections, arrangement, startNumber);
-            }
-        }
-
-        /// <summary>
-        /// Запускает определённый <see cref="GameEvents.GameEvent"/> в зависимости от ввода пользователя
-        /// </summary>
-        private void executeChoice(int choiceNumber, Components.Choice[] choices, int startNumber)
-        {
-            
         }
     }
 }
