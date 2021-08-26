@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleWriter.cs" />
+    <Compile Include="Enemies\Enemy.cs" />
     <Compile Include="GameEvents\ContinueGame.cs" />
     <Compile Include="GameEvents\ExitGame.cs" />
     <Compile Include="GameEvents\Fight.cs" />
@@ -85,9 +86,7 @@
     <None Include="App.config" />
     <None Include="text.csv" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Enemies\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
