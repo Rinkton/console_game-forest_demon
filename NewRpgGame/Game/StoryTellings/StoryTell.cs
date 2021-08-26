@@ -22,6 +22,7 @@ namespace Game.StoryTellings
                 ConsoleWriter.WriteLine(new Str(str));
                 Console.ReadKey();
             }
+            Console.Clear();
         }
     }
 }
