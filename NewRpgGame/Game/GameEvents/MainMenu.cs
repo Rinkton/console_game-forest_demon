@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Game.GameEvents
 {
-    class ToHealer : GameEvent
+    class MainMenu : GameEvent
     {
         public void Run()
         {
+            new Menus.MainMenu().Run();
         }
     }
 }

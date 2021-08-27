@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Game
+namespace Game.GameEvents
 {
-    class Manager
+    class NullGameEvent : GameEvent
     {
+        public void Run() { }
     }
 }

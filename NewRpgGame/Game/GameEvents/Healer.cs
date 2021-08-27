@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Game.GameEvents
 {
-    class ToPreamble : GameEvent
+    class Healer : GameEvent
     {
         public void Run()
         {
-            new StoryTellings.Preamble().Run();
-            new ToMainMenu().Run();
         }
     }
 }

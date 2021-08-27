@@ -24,7 +24,7 @@ namespace Game.Menus
                     new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("walk in forest")), new GameEvents.Fight()),
                     new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("go to stepan shop")), new GameEvents.Shop()),
                     new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("check ivan statistics")), new GameEvents.Statistics()),
-                    new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("go to pankrat the healer")), new GameEvents.ToHealer()),
+                    new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("go to pankrat the healer")), new GameEvents.Healer()),
                     new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("save game")), new GameEvents.SaveGame()),
                     new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("exit game")), new GameEvents.ExitGame()),
                 };

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Game.Items.Necklets
 {
-    class Necklet : Item
+    class NullNecklet : Necklet
     {
+        public NullNecklet()
+        {
+            Name = IO.TextResources.GetStringByResourceName("not exist");
+        }
     }
 }

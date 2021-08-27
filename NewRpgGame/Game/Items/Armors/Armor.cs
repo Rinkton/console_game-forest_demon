@@ -8,11 +8,6 @@ namespace Game.Items.Armors
 {
     class Armor : Item
     {
-        protected int Defense;
-
-        public Armor(GameEvents.GameEvent wearing, GameEvents.GameEvent @using, int defense) : base(wearing, @using)
-        {
-            Defense = defense;
-        }
+        public int Defense { get; protected set; }
     }
 }

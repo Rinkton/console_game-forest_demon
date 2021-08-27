@@ -12,12 +12,14 @@ namespace Game
         {
             Console.ForegroundColor = str.Color;
             Console.Write(str.Text);
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
 
         public static void WriteLine(Str str)
         {
             Console.ForegroundColor = str.Color;
             Console.WriteLine(str.Text);
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
 
         /// <summary>
@@ -28,6 +30,7 @@ namespace Game
         {
             Console.ForegroundColor = str.Color;
             Console.WriteLine(str.Text + "\n");
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
 
         /// <summary>
@@ -39,6 +42,18 @@ namespace Game
             foreach(Str str in strs)
             {
                 Write(str);
+            }
+        }
+
+        /// <summary>
+        /// Пишет в консоль все Str-s с переносом строки с помощью здешнего метода <see cref="WriteLine(Str)"/>
+        /// </summary>
+        /// <param name="strs"></param>
+        public static void WriteLineStrs(Str[] strs)
+        {
+            foreach (Str str in strs)
+            {
+                WriteLine(str);
             }
         }
     }

@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace Game
 {
+    /// <summary>
+    /// Обрабатывает пользовательский ввод и также после корректной обработки очищает консоль
+    /// </summary>
     static class InputProcessing
     {
+        public static void WaitKey()
+        {
+            Console.ReadKey();
+            Console.Clear();
+        }
+
         //TODO: RunChoice gotta have a better name
         public static void RunChoice(Menus.Components.Choice[] choices, int startNumber)
         {
@@ -21,7 +30,6 @@ namespace Game
                 inRange = choiceNumber >= 0 && choiceNumber < choices.Length;
                 if (inRange)
                 {
-                    //TODO: Да, RunChoice пред запускам эвента ещё и консоль чистит, ишь какой молодец
                     Console.Clear();
                     choices[choiceNumber].GameEvent.Run();
                 }

@@ -8,24 +8,18 @@ namespace Game.Items
 {
     abstract class Item
     {
+        public string Name { get; protected set; }//TODO: Ideal candidat on fix
+
         /// <summary>
         /// Событие, которое происходит при надевании(создании экземпляра) предмета
         /// </summary>
-        public readonly GameEvents.GameEvent Wearing;
+        public GameEvents.GameEvent Wearing { get; protected set; }
 
         /// <summary>
         /// Событие, которое происходит при использовании предмета 
         /// (Например удар по игроку вызывает событие у брони, когда же удар по врагу вызывает событие у оружия)
         /// </summary>
-        public readonly GameEvents.GameEvent Using;
-
-        public Item(GameEvents.GameEvent wearing, GameEvents.GameEvent @using)
-        {
-            Wearing = wearing;
-            Using = @using;
-
-            Wearing.Run();
-        }
+        public GameEvents.GameEvent Using { get; protected set; }
 
         //TODO: Сделать настоящий Event чтобы вызывать Using
     }

@@ -14,9 +14,9 @@ namespace Game.Menus
             Components.Choice[] choices =
                 new Components.Choice[]
                 {
-                    new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("start game")), new GameEvents.NewGame()),
+                    new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("start game")), new GameEvents.GameMenu()),
                     //TODO: Если сэйва нет, то кнопка потухает
-                    new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("continue game")), new GameEvents.ContinueGame()),
+                    new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("continue game")), new GameEvents.LoadGame()),
                     new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("exit game")), new GameEvents.ExitGame()),
                 };
             int startNumber = 1;

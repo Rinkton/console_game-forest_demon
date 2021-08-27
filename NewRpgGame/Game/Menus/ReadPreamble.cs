@@ -16,8 +16,8 @@ namespace Game.Menus
             Components.Choice[] choices =
                 new Components.Choice[]
                 {
-                    new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("yes")), new GameEvents.ToPreamble()),
-                    new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("no")), new GameEvents.ToMainMenu()),
+                    new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("yes")), new GameEvents.Preamble()),
+                    new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("no")), new GameEvents.MainMenu()),
                 };
             int startNumber = 1;
 
