@@ -8,7 +8,7 @@ namespace Game.Items
 {
     abstract class Item
     {
-        public string Name { get; protected set; }//TODO: Ideal candidat on fix
+        public string Name { get; protected set; }
 
         /// <summary>
         /// Событие, которое происходит при надевании(создании экземпляра) предмета
