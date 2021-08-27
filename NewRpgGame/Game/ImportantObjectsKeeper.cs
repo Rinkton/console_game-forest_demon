@@ -11,6 +11,6 @@ namespace Game
     /// </summary>
     static class ImportantObjectsKeeper
     {
-        public static Player Player = new Player();
+        public static Player.Obj Player = new Player.Obj();
     }
 }

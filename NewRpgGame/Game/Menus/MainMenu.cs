@@ -27,7 +27,7 @@ namespace Game.Menus
                 );
             ConsoleWriter.WriteLine(new Str(""));
             ConsoleWriter.WriteLine(new Str(IO.TextResources.GetStringByResourceName("developer vk"), ConsoleColor.Blue));
-            InputProcessing.RunChoice(choices, startNumber);
+            InputHandler.HandleChoice(choices, startNumber);
         }
     }
 }

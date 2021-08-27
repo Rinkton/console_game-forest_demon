@@ -23,7 +23,7 @@ namespace Game.GameEvents
                     new Str($"{IO.TextResources.GetStringByResourceName("healing potion count")}: {ImportantObjectsKeeper.Player.HealingPotionCount}", ConsoleColor.Magenta),
                 }
                 );
-            InputProcessing.WaitKey();
+            InputHandler.WaitKey();
             new GameMenu().Run();
         }
     }

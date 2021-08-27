@@ -26,7 +26,7 @@ namespace Game.Menus
                 IO.TextResources.GetStringByResourceName("want preamble"),
                 startNumber:startNumber
                 );
-            InputProcessing.RunChoice(choices, startNumber);
+            InputHandler.HandleChoice(choices, startNumber);
         }
     }
 }

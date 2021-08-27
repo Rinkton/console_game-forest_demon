@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Game
+namespace Game.Player
 {
-    class Player
+    class Obj
     {
-        #region Отображаемые характеристики
         public int MaxHealth;
         public int CurrentHealth;
         public Items.Weapons.Weapon Weapon;
@@ -17,16 +16,8 @@ namespace Game
         public int PunishmentPercent;
         public int Money;
         public int HealingPotionCount;
-        #endregion
 
-        //TODO: Стоп... так у него не так ведь система ударов работает!
-        //Шансы в процентах на какой-либо определённый вид удара:
-        public int MissPercentChance;
-        public int WeakPercentChance;
-        public int NormalPercentChance;
-        public int StrongPercentChance;
-
-        public Player()
+        public Obj()
         {
             MaxHealth = 100;
             CurrentHealth = MaxHealth;

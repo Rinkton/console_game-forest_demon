@@ -35,7 +35,7 @@ namespace Game.Menus
                 IO.TextResources.GetStringByResourceName("what do you want to do in this village for now"),
                 startNumber: startNumber
                 );
-            InputProcessing.RunChoice(choices, startNumber);
+            InputHandler.HandleChoice(choices, startNumber);
         }
     }
 }

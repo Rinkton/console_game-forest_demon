@@ -61,6 +61,7 @@
     <Compile Include="GameEvents\Healer.cs" />
     <Compile Include="GameEvents\MainMenu.cs" />
     <Compile Include="GameEvents\Preamble.cs" />
+    <Compile Include="Hit.cs" />
     <Compile Include="InputProcessing.cs" />
     <Compile Include="Items\Armors\Armor.cs" />
     <Compile Include="Items\Armors\IvanRags.cs" />
@@ -76,11 +77,12 @@
     <Compile Include="Menus\MainMenu.cs" />
     <Compile Include="Menus\Menu.cs" />
     <Compile Include="Menus\ReadPreamble.cs" />
+    <Compile Include="Player\HitTypes\HitType.cs" />
     <Compile Include="StoryTellings\Preamble.cs" />
     <Compile Include="StoryTellings\StoryTell.cs" />
     <Compile Include="IO\TextResources.cs" />
     <Compile Include="ImportantObjectsKeeper.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="Player\Obj.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="resources.Designer.cs">

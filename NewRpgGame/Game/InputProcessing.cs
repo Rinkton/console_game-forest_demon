@@ -9,7 +9,7 @@ namespace Game
     /// <summary>
     /// Обрабатывает пользовательский ввод и также после корректной обработки очищает консоль
     /// </summary>
-    static class InputProcessing
+    static class InputHandler
     {
         public static void WaitKey()
         {
@@ -17,8 +17,13 @@ namespace Game
             Console.Clear();
         }
 
-        //TODO: RunChoice gotta have a better name
-        public static void RunChoice(Menus.Components.Choice[] choices, int startNumber)
+        /// <summary>
+        /// Принимает пользовательский ввод, валидирует его и если валидация успешна, то 
+        /// он запускает <see cref="GameEvents.GameEvent"/> у <see cref="Menus.Components.Choice"/>
+        /// </summary>
+        /// <param name="choices"></param>
+        /// <param name="startNumber"></param>
+        public static void HandleChoice(Menus.Components.Choice[] choices, int startNumber)
         {
             string input = Console.ReadLine();
             bool isNotEmpty = input != "";
@@ -36,7 +41,7 @@ namespace Game
             }
             if(!(isNotEmpty && isNumber && inRange))
             {
-                RunChoice(choices, startNumber);
+                HandleChoice(choices, startNumber);
             }
         }
     }
