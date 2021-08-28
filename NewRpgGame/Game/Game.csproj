@@ -49,6 +49,7 @@
     <Compile Include="CommodityItems\Weapons\Weapon.cs" />
     <Compile Include="ConsoleWriter.cs" />
     <Compile Include="Enemies\Enemy.cs" />
+    <Compile Include="FractionToPercentConverter.cs" />
     <Compile Include="GameEvents\LoadGame.cs" />
     <Compile Include="GameEvents\ExitGame.cs" />
     <Compile Include="GameEvents\Fight.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="GameEvents\MainMenu.cs" />
     <Compile Include="GameEvents\Preamble.cs" />
     <Compile Include="Hit.cs" />
+    <Compile Include="HitResult.cs" />
     <Compile Include="InputProcessing.cs" />
     <Compile Include="Items\Armors\Armor.cs" />
     <Compile Include="Items\Armors\IvanRags.cs" />
@@ -77,7 +79,11 @@
     <Compile Include="Menus\MainMenu.cs" />
     <Compile Include="Menus\Menu.cs" />
     <Compile Include="Menus\ReadPreamble.cs" />
+    <Compile Include="Player\HitTypes\Charge.cs" />
     <Compile Include="Player\HitTypes\HitType.cs" />
+    <Compile Include="Player\HitTypes\Normal.cs" />
+    <Compile Include="Player\HitTypes\Strong.cs" />
+    <Compile Include="Player\HitTypes\Weak.cs" />
     <Compile Include="StoryTellings\Preamble.cs" />
     <Compile Include="StoryTellings\StoryTell.cs" />
     <Compile Include="IO\TextResources.cs" />

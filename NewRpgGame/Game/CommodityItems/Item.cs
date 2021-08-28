@@ -11,7 +11,7 @@ namespace Game.CommodityItems
     /// </summary>
     abstract class Item
     {
-        public int Cost;
+        public int Cost { get; protected set; }
 
         /// <summary>
         /// Как описывает товар купец Степан этот товар

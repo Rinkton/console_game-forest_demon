@@ -18,7 +18,7 @@ namespace Tests.IO
             {
                 Assert.True(given1 == "not existing");
             }
-            Assert.Equal(actual, expected);
+            Assert.Equal(expected, actual);
         }
 
         [Theory]
@@ -35,7 +35,7 @@ namespace Tests.IO
             {
                 Assert.True(given1 == "not existing");
             }
-            Assert.Equal(actual, expected);
+            Assert.Equal(expected, actual);
         }
     }
 }

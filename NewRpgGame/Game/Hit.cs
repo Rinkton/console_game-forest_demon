@@ -9,14 +9,14 @@ namespace Game
     /// <summary>
     /// Характеристики удара, который может быть нанесён игроком или врагом
     /// </summary>
-    class Hit
+    public class Hit
     {
-        public readonly float DamageMultipler;
+        public readonly HitResult HitResult;
         public readonly int PercentChance;
 
-        public Hit(float damageMultipler, int percentChance)
+        public Hit(HitResult hitResult, int percentChance=0)
         {
-            DamageMultipler = damageMultipler;
+            HitResult = hitResult;
             PercentChance = percentChance;
         }
     }

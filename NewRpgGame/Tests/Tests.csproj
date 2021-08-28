@@ -62,7 +62,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FractionToPercentConverter.cs" />
     <Compile Include="IO\TextResources.cs" />
+    <Compile Include="Player\HitTypes\HitType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
