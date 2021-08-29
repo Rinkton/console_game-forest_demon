@@ -30,33 +30,44 @@ namespace Game.Player.HitTypes
                 luckPercent = new Random().Next(0, 100);
             }
 
-            //TODO: currentPercent - должен иметь более хорошее название
             int previousPercent = 0;
-            int nextPercent = Miss.PercentChance;
+            int nextPercent = 0;
 
-            //TODO: А зачем проверять previousPercent? Всё ж и без этой доп. переменной и проверки можно сделать?
-            //TODO: Здесь также должен быть > previousPercent, но на ноль тож проверяется, а может он и не нужен?
-            if(Miss != null && luckPercent <= nextPercent)
+            if(Miss != null)
             {
-                return Miss.HitResult;
+                previousPercent = nextPercent;
+                nextPercent += Miss.PercentChance;
+                if(luckPercent < nextPercent)
+                {
+                    return Miss.HitResult;
+                }
             }
-            previousPercent = nextPercent;
-            nextPercent += Weak.PercentChance;
-            if(Weak != null && luckPercent > previousPercent && luckPercent <= nextPercent)
+            if(Weak != null)
             {
-                return Weak.HitResult;
+                previousPercent = nextPercent;
+                nextPercent += Weak.PercentChance;
+                if(luckPercent < nextPercent)
+                {
+                    return Weak.HitResult;
+                }
             }
-            previousPercent = nextPercent;
-            nextPercent += Normal.PercentChance;
-            if (Normal != null && luckPercent > previousPercent && luckPercent <= nextPercent)
+            if(Normal != null)
             {
-                return Normal.HitResult;
+                previousPercent = nextPercent;
+                nextPercent += Normal.PercentChance;
+                if(luckPercent < nextPercent)
+                {
+                    return Normal.HitResult;
+                }
             }
-            previousPercent = nextPercent;
-            nextPercent += Strong.PercentChance;
-            if (Strong != null && luckPercent > previousPercent && luckPercent <= nextPercent)
+            if(Strong != null)
             {
-                return Strong.HitResult;
+                previousPercent = nextPercent;
+                nextPercent += Strong.PercentChance;
+                if(luckPercent < nextPercent)
+                {
+                    return Strong.HitResult;
+                }
             }
 
             throw new Exception("Исходя из данного процента функция не в состоянии вернуть какой либо результат");

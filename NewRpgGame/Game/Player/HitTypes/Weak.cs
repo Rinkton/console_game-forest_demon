@@ -12,9 +12,9 @@ namespace Game.Player.HitTypes
         {
             string className = "weak";
             Miss = new Hit(new HitResult(IO.TextResources.GetStringByResourceName($"{className} miss"), 0), FractionToPercentConverter.GetPercent(1));
-            Weak = new Hit(new HitResult(IO.TextResources.GetStringByResourceName($"{className} weak"), 0.5f), FractionToPercentConverter.GetPercent(3));
-            Normal = new Hit(new HitResult(IO.TextResources.GetStringByResourceName($"{className} normal"), 1), FractionToPercentConverter.GetPercent(2));
-            Strong = new Hit(new HitResult(IO.TextResources.GetStringByResourceName($"{className} strong"), 1.5f), FractionToPercentConverter.GetPercent(3));
+            Weak = new Hit(new HitResult(IO.TextResources.GetStringByResourceName($"{className} weak"), 0.25f), FractionToPercentConverter.GetPercent(3));
+            Normal = new Hit(new HitResult(IO.TextResources.GetStringByResourceName($"{className} normal"), 0.75f), FractionToPercentConverter.GetPercent(2));
+            Strong = new Hit(new HitResult(IO.TextResources.GetStringByResourceName($"{className} strong"), 1.25f), FractionToPercentConverter.GetPercent(3));
         }
     }
 }
