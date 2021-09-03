@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Game.Items
 {
-    abstract class Item
+    public abstract class Item
     {
         public string Name { get; protected set; }
 

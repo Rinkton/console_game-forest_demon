@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Game.CommodityItems.Armors
+namespace Game.Shop.CommodityItems.Necklets
 {
-    class Armor : Item
+    abstract class Necklet : Item
     {
-        public Items.Armors.Armor _Armor { get; protected set; }
     }
 }

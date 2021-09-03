@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Game.IO;
 
 namespace Game.Items.Necklets
 {
@@ -10,7 +6,7 @@ namespace Game.Items.Necklets
     {
         public NullNecklet()
         {
-            Name = IO.TextResources.GetStringByResourceName("not exist");
+            Name = TextResources.GetStringByResourceName("not exist");
         }
     }
 }

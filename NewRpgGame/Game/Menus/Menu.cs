@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Game.Menus.Components;
 
 namespace Game.Menus
 {
     public class Menu
     {
-        protected void Visualize(Components.Choice[] choices, string description=null,
-        Components.Section[] sections=null, 
-        Components.Arrangement arrangement=Components.Arrangement.InList, int startNumber=1)
+        protected void Visualize(Choice[] choices, string description=null,
+        Section[] sections=null, 
+        Arrangement arrangement=Arrangement.InList, Tabulation tabulation=Tabulation.Default, int startNumber=1)
         {
             List<Str> strList = new List<Str>();
 
@@ -22,12 +20,12 @@ namespace Game.Menus
             #endregion
 
             int i = startNumber;
-            foreach(Components.Choice choice in choices)
+            foreach(Choice choice in choices)
             {
                 #region sections
                 if(sections != null)
                 {
-                    foreach (Components.Section section in sections)
+                    foreach (Section section in sections)
                     {
                         if (section.Number == i)
                         {
@@ -35,10 +33,10 @@ namespace Game.Menus
                             {
                                 switch (arrangement)
                                 {
-                                    case Components.Arrangement.InList:
+                                    case Arrangement.InList:
                                         strList.Add(new Str("\n"));
                                         break;
-                                    case Components.Arrangement.InLine:
+                                    case Arrangement.InLine:
                                         strList.Add(new Str("\n\n"));
                                         break;
                                 }
@@ -51,6 +49,12 @@ namespace Game.Menus
                 #endregion
 
                 #region choices
+                switch(tabulation)
+                {
+                    case Tabulation.FourSpace:
+                        strList.Add(new Str("    "));
+                        break;
+                }
                 strList.Add(new Str(i + ") "));
                 strList.Add(choice.Str);
                 #endregion
@@ -60,11 +64,11 @@ namespace Game.Menus
                 {
                     switch (arrangement)
                     {
-                        case Components.Arrangement.InList:
-                            strList.Add(new Str("\n"));
-                            break;
-                        case Components.Arrangement.InLine:
+                        case Arrangement.InLine:
                             strList.Add(new Str("    "));
+                            break;
+                        case Arrangement.InList:
+                            strList.Add(new Str("\n"));
                             break;
                     }
                 }

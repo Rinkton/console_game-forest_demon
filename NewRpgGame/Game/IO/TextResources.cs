@@ -35,7 +35,7 @@ namespace Game.IO
                     return columns[1];
                 }
             }
-            throw new Exception("В ресурсах не было найдено строки под таким именем ресурса.");
+            throw new Exception($"В ресурсах не было найдено строки под таким именем ресурса ({resourceName}).");
         }
 
         /// <summary>
@@ -66,22 +66,22 @@ namespace Game.IO
             }
             catch { }
 
-            throwExceptionIfResourceDontExist(stringList);
+            throwExceptionIfResourceDontExist(stringList, resourceGroupName);
             return stringList.ToArray();
         }
 
-        private static void throwExceptionIfResourceDontExist(string str)
+        private static void throwExceptionIfResourceDontExist(string str, string resourceName)
         {
             if (str == null)
             {
-                throw new Exception("В ресурсах не было найдено строки под таким именем ресурса.");
+                throw new Exception($"В ресурсах не было найдено строки под таким именем ресурса ({resourceName}).");
             }
         }
-        private static void throwExceptionIfResourceDontExist(List<string> stringList)
+        private static void throwExceptionIfResourceDontExist(List<string> stringList, string groupResourceName)
         {
             if (stringList.Count == 0)
             {
-                throw new Exception("В ресурсах не было найдено никаких строк с таким именем группы ресурсов.");
+                throw new Exception($"В ресурсах не было найдено никаких строк с таким именем группы ресурсов ({groupResourceName}).");
             }
         }
     }

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Game.GameEvents
 {
-    class Shop : GameEvent
+    class SureBuyItem : GameEvent
     {
         public void Run()
         {
-            new Menus.Shop().Run();
+            throw new NotImplementedException();
         }
     }
 }

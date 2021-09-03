@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Game.Items.Necklets
 {
-    class Necklet : Item
+    abstract class Necklet : Item
     {
     }
 }

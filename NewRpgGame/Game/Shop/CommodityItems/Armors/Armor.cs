@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Game.CommodityItems.Weapons
+namespace Game.Shop.CommodityItems.Armors
 {
-    class Weapon : Item
+    abstract class Armor : Item
     {
-        public Items.Weapons.Weapon _Weapon { get; protected set; }
     }
 }

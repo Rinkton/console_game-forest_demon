@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Game.IO;
 
 namespace Game.Player.HitTypes
 {
@@ -11,8 +7,8 @@ namespace Game.Player.HitTypes
         public Strong()
         {
             string className = "strong";
-            Miss = new Hit(new HitResult(IO.TextResources.GetStringByResourceName($"{className} miss"), 0), FractionToPercentConverter.GetPercent(5));
-            Strong = new Hit(new HitResult(IO.TextResources.GetStringByResourceName($"{className} strong"), 2), FractionToPercentConverter.GetPercent(4));
+            Miss = new Hit(new HitResult(TextResources.GetStringByResourceName($"{className} miss"), 0), FractionToPercentConverter.GetPercent(5));
+            Strong = new Hit(new HitResult(TextResources.GetStringByResourceName($"{className} strong"), 2), FractionToPercentConverter.GetPercent(4));
         }
     }
 }

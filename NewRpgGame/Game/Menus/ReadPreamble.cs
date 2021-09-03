@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Game.IO;
+using Game.Menus.Components;
 
 namespace Game.Menus
 {
@@ -13,17 +10,17 @@ namespace Game.Menus
     {
         public void Run()
         {
-            Components.Choice[] choices =
-                new Components.Choice[]
+            Choice[] choices =
+                new Choice[]
                 {
-                    new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("yes")), new GameEvents.Preamble()),
-                    new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("no")), new GameEvents.MainMenu()),
+                    new Choice(new Str(TextResources.GetStringByResourceName("yes")), new GameEvents.Preamble()),
+                    new Choice(new Str(TextResources.GetStringByResourceName("no")), new GameEvents.MainMenu()),
                 };
             int startNumber = 1;
 
             base.Visualize(
                 choices,
-                IO.TextResources.GetStringByResourceName("want preamble"),
+                TextResources.GetStringByResourceName("want preamble"),
                 startNumber:startNumber
                 );
             InputHandler.HandleChoice(choices, startNumber);

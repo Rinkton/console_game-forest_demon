@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Game.IO;
+using Game.Menus.Components;
 
 namespace Game.Menus
 {
@@ -10,14 +8,14 @@ namespace Game.Menus
     {
         public void Run()
         {
-            ConsoleWriter.WriteLineWithLineBreak(new Str(IO.TextResources.GetStringByResourceName("game name"), ConsoleColor.Red));
-            Components.Choice[] choices =
+            ConsoleWriter.WriteLineWithLineBreak(new Str(TextResources.GetStringByResourceName("game name"), ConsoleColor.Red));
+            Choice[] choices =
                 new Components.Choice[]
                 {
-                    new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("start game")), new GameEvents.GameMenu()),
+                    new Choice(new Str(TextResources.GetStringByResourceName("start game")), new GameEvents.GameMenu()),
                     //TODO: Если сэйва нет, то кнопка потухает
-                    new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("continue game")), new GameEvents.LoadGame()),
-                    new Components.Choice(new Str(IO.TextResources.GetStringByResourceName("exit game")), new GameEvents.ExitGame()),
+                    new Choice(new Str(TextResources.GetStringByResourceName("continue game")), new GameEvents.LoadGame()),
+                    new Choice(new Str(TextResources.GetStringByResourceName("exit game")), new GameEvents.ExitGame()),
                 };
             int startNumber = 1;
 
@@ -26,7 +24,7 @@ namespace Game.Menus
                 startNumber:startNumber
                 );
             ConsoleWriter.WriteLine(new Str(""));
-            ConsoleWriter.WriteLine(new Str(IO.TextResources.GetStringByResourceName("developer vk"), ConsoleColor.Blue));
+            ConsoleWriter.WriteLine(new Str(TextResources.GetStringByResourceName("developer vk"), ConsoleColor.Blue));
             InputHandler.HandleChoice(choices, startNumber);
         }
     }

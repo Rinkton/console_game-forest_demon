@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Game.CommodityItems.Necklets
+namespace Game.Menus.Components
 {
-    class Necklet : Item
+    public enum Tabulation
     {
-        public Items.Necklets.Necklet _Necklet { get; protected set; }
+        Default,
+        FourSpace
     }
 }

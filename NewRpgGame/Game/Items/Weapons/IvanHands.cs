@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Game.IO;
 
 namespace Game.Items.Weapons
 {
@@ -10,7 +6,7 @@ namespace Game.Items.Weapons
     {
         public IvanHands()
         {
-            Name = IO.TextResources.GetStringByResourceName("ivan hands");
+            Name = TextResources.GetStringByResourceName("ivan hands");
             Damage = 10;
         }
     }

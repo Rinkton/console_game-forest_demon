@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Game.Items.Weapons
 {
-    class Weapon : Item
+    abstract class Weapon : Item
     {
         public int Damage { get; protected set; }
     }
