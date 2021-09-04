@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,10 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameEvents\Buy.cs" />
+    <Compile Include="GameEvents\EquipItem.cs" />
+    <Compile Include="GameEvents\LookCommodityItem.cs" />
     <Compile Include="GameEvents\RemoveItem.cs" />
-    <Compile Include="GameEvents\SureBuy.cs" />
-    <Compile Include="GameEvents\WearItem.cs" />
     <Compile Include="Menus\Components\Tabulation.cs" />
+    <Compile Include="Menus\LookCommodityItem.cs" />
     <Compile Include="Shop\CommodityItems\Armors\Armor.cs" />
     <Compile Include="Shop\CommodityItems\Armors\NormalClothes.cs" />
     <Compile Include="Shop\CommodityItems\Item.cs" />
@@ -118,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="text.csv" />
   </ItemGroup>
   <ItemGroup />

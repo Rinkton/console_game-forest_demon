@@ -8,5 +8,14 @@ namespace Game.Shop.CommodityItems.Armors
 {
     abstract class Armor : Item
     {
+        public override void Equip()
+        {
+            foreach(Item commodityItem in ImportantObjectsKeeper.StepanStock.Armors)
+            {
+                IfStateIsEquipedThenRemove(commodityItem);
+            }
+
+            State = State.Equiped;
+        }
     }
 }

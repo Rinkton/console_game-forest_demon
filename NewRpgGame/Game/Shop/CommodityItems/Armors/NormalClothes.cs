@@ -8,6 +8,7 @@ namespace Game.Shop.CommodityItems.Armors
         {
             Items.Armors.NormalClothes concreteItem = new Items.Armors.NormalClothes();
             _Item = new Items.Armors.NormalClothes();
+            GenetiveName = TextResources.GetStringByResourceName("normal clothes genitive");
             Properties = TextResources.GetStringByResourceName("non specific armor properties").Replace("*", concreteItem.Defense.ToString());
             Cost = 25;
             State = State.InStock;

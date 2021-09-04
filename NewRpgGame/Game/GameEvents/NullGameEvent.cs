@@ -8,6 +8,6 @@ namespace Game.GameEvents
 {
     class NullGameEvent : GameEvent
     {
-        public void Run() { }
+        public override void Run() { }
     }
 }

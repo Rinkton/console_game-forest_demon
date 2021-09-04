@@ -10,7 +10,7 @@ namespace Game.Menus
         {
             ConsoleWriter.WriteLineWithLineBreak(new Str(TextResources.GetStringByResourceName("game name"), ConsoleColor.Red));
             Choice[] choices =
-                new Components.Choice[]
+                new Choice[]
                 {
                     new Choice(new Str(TextResources.GetStringByResourceName("start game")), new GameEvents.GameMenu()),
                     //TODO: Если сэйва нет, то кнопка потухает

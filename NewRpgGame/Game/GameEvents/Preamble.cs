@@ -8,7 +8,7 @@ namespace Game.GameEvents
 {
     class Preamble : GameEvent
     {
-        public void Run()
+        public override void Run()
         {
             new StoryTellings.Preamble().Run();
             new MainMenu().Run();

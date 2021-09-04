@@ -6,8 +6,26 @@ using System.Threading.Tasks;
 
 namespace Game.GameEvents
 {
-    public interface GameEvent
+    public abstract class GameEvent
     {
-        void Run();
+        /// <summary>
+        /// Аргументы, нужные для игрового события.
+        /// Осторожно! - динамическая типизация!
+        /// </summary>
+        protected readonly object[] Args;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args">Аргументы, нужные для игрового события</param>
+        public GameEvent(params object[] args)
+        {
+            Args = args;
+        }
+
+        public virtual void Run()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace Game.GameEvents
 {
     class MainMenu : GameEvent
     {
-        public void Run()
+        public override void Run()
         {
             new Menus.MainMenu().Run();
         }

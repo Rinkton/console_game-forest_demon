@@ -25,7 +25,7 @@ namespace Game.Player
             Armor = new Items.Armors.IvanRags();
             Necklet = new Items.Necklets.NullNecklet();
             PunishmentPercent = 0;
-            Money = 0;
+            Money = 500;
             HealingPotionCount = 0;
         }
     }

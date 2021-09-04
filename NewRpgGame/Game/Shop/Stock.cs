@@ -27,5 +27,16 @@ namespace Game.Shop
 
             return itemList.ToArray();
         }
+
+        public void EquipThisItem(CommodityItems.Item commodityItem)
+        {
+            foreach(CommodityItems.Item someCommodityItem in GetItems())
+            {
+                if(commodityItem.GetType() == someCommodityItem.GetType())
+                {
+                    someCommodityItem.ChangeState(CommodityItems.State.Equiped);
+                }
+            }
+        }
     }
 }

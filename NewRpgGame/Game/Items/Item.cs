@@ -11,9 +11,9 @@ namespace Game.Items
         public string Name { get; protected set; }
 
         /// <summary>
-        /// Событие, которое происходит при надевании(создании экземпляра) предмета
+        /// Событие, которое происходит при экипировании(создании экземпляра) предмета
         /// </summary>
-        public GameEvents.GameEvent Wearing { get; protected set; }
+        public GameEvents.GameEvent Equiping { get; protected set; }
 
         /// <summary>
         /// Событие, которое происходит при использовании предмета 

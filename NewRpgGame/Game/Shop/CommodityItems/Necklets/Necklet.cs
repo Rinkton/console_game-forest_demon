@@ -8,5 +8,14 @@ namespace Game.Shop.CommodityItems.Necklets
 {
     abstract class Necklet : Item
     {
+        public override void Equip()
+        {
+            foreach(Item commodityItem in ImportantObjectsKeeper.StepanStock.Necklets)
+            {
+                IfStateIsEquipedThenRemove(commodityItem);
+            }
+
+            State = State.Equiped;
+        }
     }
 }

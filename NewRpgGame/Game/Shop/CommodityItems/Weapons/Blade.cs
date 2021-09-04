@@ -8,6 +8,7 @@ namespace Game.Shop.CommodityItems.Weapons
         {
             Items.Weapons.Blade concreteItem = new Items.Weapons.Blade();
             _Item = new Items.Weapons.Blade();
+            GenetiveName = TextResources.GetStringByResourceName("blade genitive");
             Properties = TextResources.GetStringByResourceName("non specific weapon properties").Replace("*", concreteItem.Damage.ToString());
             Cost = 55;
             State = State.InStock;

@@ -8,7 +8,7 @@ namespace Game.GameEvents
 {
     class LoadGame : GameEvent
     {
-        public void Run()
+        public override void Run()
         {
         }
     }

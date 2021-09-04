@@ -8,6 +8,7 @@ namespace Game.Shop.CommodityItems.Necklets
         {
             Items.Necklets.NeckletOfLife concreteItem = new Items.Necklets.NeckletOfLife();
             _Item = new Items.Necklets.NeckletOfLife();
+            GenetiveName = TextResources.GetStringByResourceName("necklet of life genitive");
             Properties = TextResources.GetStringByResourceName("max health addition properties").Replace("*", concreteItem.MaxHealthAddition.ToString());
             Cost = 500;
             State = State.InStock;

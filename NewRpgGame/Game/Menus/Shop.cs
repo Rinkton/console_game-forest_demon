@@ -7,11 +7,11 @@ using Game.GameEvents;
 
 namespace Game.Menus
 {
+    //TODO: Однако экипировка и определение наличия всё ещё зависит от магаза и всё переодевание шмотья определяется магазом
     class Shop : Menu
     {
         public void Run()
         {
-            //TODO: Если оружие уже куплено - цену показывать не надо. Если куплен просто предмет(загадочный шар), то его нельзя эквипнуть, он сразу жёлтый
             ConsoleWriter.WriteLineWithLineBreak(new Str(TextResources.GetStringByResourceName("stepan what do you want to buy"), ConsoleColor.DarkCyan));
 
             List<Choice> commodityItemChoices = new List<Choice>();
@@ -35,19 +35,19 @@ namespace Game.Menus
         {
             List<Choice> choiceList = new List<Choice>();
 
-            foreach(Game.Shop.CommodityItems.Item commodityItem in new StepanStock().GetItems())
+            foreach(Game.Shop.CommodityItems.Item commodityItem in ImportantObjectsKeeper.StepanStock.GetItems())
             {
                 GameEvent gameEvent = new NullGameEvent();
                 switch(commodityItem.State)
                 {
                     case Game.Shop.CommodityItems.State.InStock:
-                        gameEvent = new SureBuyItem();
+                        gameEvent = new GameEvents.LookCommodityItem(commodityItem);
                         break;
                     case Game.Shop.CommodityItems.State.Bought:
-                        gameEvent = new WearItem();
+                        gameEvent = new GameEvents.EquipItem(commodityItem);
                         break;
                     case Game.Shop.CommodityItems.State.Equiped:
-                        gameEvent = new RemoveItem();
+                        gameEvent = new GameEvents.RemoveItem(commodityItem);
                         break;
                 }
 
@@ -62,17 +62,16 @@ namespace Game.Menus
             List<Section> sectionList = new List<Section>();
 
             int number = startNumber;
-            StepanStock stepanStock = new StepanStock();
 
             sectionList.Add(new Section(new Str(TextResources.GetStringByResourceName("weapons"), ConsoleColor.Red), number));
 
-            number += stepanStock.Weapons.Length;
+            number += ImportantObjectsKeeper.StepanStock.Weapons.Length;
             sectionList.Add(new Section(new Str(TextResources.GetStringByResourceName("armors"), ConsoleColor.Gray), number));
 
-            number += stepanStock.Armors.Length;
+            number += ImportantObjectsKeeper.StepanStock.Armors.Length;
             sectionList.Add(new Section(new Str(TextResources.GetStringByResourceName("necklets"), ConsoleColor.DarkMagenta), number));
 
-            number += stepanStock.Necklets.Length;
+            number += ImportantObjectsKeeper.StepanStock.Necklets.Length;
             sectionList.Add(new Section(new Str(TextResources.GetStringByResourceName("others"), ConsoleColor.DarkGray), number));
 
             return sectionList.ToArray();

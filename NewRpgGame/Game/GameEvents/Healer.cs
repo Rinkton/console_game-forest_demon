@@ -8,7 +8,7 @@ namespace Game.GameEvents
 {
     class Healer : GameEvent
     {
-        public void Run()
+        public override void Run()
         {
         }
     }

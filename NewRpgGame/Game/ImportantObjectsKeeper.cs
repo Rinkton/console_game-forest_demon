@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Game
 {
     /// <summary>
@@ -12,5 +7,7 @@ namespace Game
     static class ImportantObjectsKeeper
     {
         public static Player.Obj Player = new Player.Obj();
+
+        public static Shop.StepanStock StepanStock = new Shop.StepanStock();
     }
 }

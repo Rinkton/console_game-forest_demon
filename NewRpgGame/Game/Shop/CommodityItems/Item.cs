@@ -11,6 +11,8 @@ namespace Game.Shop.CommodityItems
     {
         public virtual Items.Item _Item { get; protected set; }
 
+        public string GenetiveName { get; protected set; }
+
         public string Properties { get; protected set; }
 
         public int Cost { get; protected set; }
@@ -59,6 +61,38 @@ namespace Game.Shop.CommodityItems
             }
 
             return new Str(SBNomination.ToString(), color);
+        }
+
+        public void ChangeState(State newState) => State = newState;
+
+        public virtual void Equip()
+        {
+            foreach(Item commodityItem in ImportantObjectsKeeper.StepanStock.GetItems())
+            {
+                IfStateIsEquipedThenRemove(commodityItem);
+            }
+
+            State = State.Equiped;
+        }
+
+        public void Remove()
+        {
+            State = State.Bought;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="commodityItem"></param>
+        /// <returns>Is state is <see cref="State.Equiped"/> in this <see cref="Item"/></returns>
+        protected bool IfStateIsEquipedThenRemove(Item commodityItem)
+        {
+            if(commodityItem.State == State.Equiped)
+            {
+                commodityItem.Remove();
+                return true;
+            }
+            return false;
         }
     }
 }

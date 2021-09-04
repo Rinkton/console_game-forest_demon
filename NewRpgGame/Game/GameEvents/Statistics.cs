@@ -5,7 +5,7 @@ namespace Game.GameEvents
 {
     class Statistics : GameEvent
     {
-        public void Run()
+        public override void Run()
         {
             ConsoleWriter.WriteLineStrs(
                 new Str[]
