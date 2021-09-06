@@ -49,14 +49,12 @@ namespace Game.Menus
                 #endregion
 
                 #region choices
-                switch(tabulation)
+                if(tabulation == Tabulation.FourSpace)
                 {
-                    case Tabulation.FourSpace:
-                        strList.Add(new Str("    "));
-                        break;
+                    strList.Add(new Str("    "));
                 }
-                strList.Add(new Str(i + ") "));
-                strList.Add(choice.Str);
+                strList.Add(new Str(i + ") ", choice.TextStr.Color));
+                strList.Add(choice.TextStr);
                 #endregion
 
                 #region arrangement

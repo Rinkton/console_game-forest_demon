@@ -8,7 +8,7 @@ namespace Game.Menus.Components
 {
     public class Choice
     {
-        public readonly Str Str;
+        public readonly Str TextStr;
 
         /// <summary>
         /// Какое событие произойдёт, если этот выбор будет выбран?
@@ -17,7 +17,7 @@ namespace Game.Menus.Components
 
         public Choice(Str str, GameEvents.GameEvent gameEvent)
         {
-            Str = str;
+            TextStr = str;
             GameEvent = gameEvent;
         }
     }
