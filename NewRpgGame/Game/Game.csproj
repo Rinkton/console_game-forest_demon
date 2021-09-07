@@ -49,7 +49,8 @@
     <Compile Include="GameEvents\Buy.cs" />
     <Compile Include="GameEvents\EquipItem.cs" />
     <Compile Include="GameEvents\LookCommodityItem.cs" />
-    <Compile Include="GameEvents\RemoveItem.cs" />
+    <Compile Include="GameEvents\RemoveItemAndEquipDefault.cs" />
+    <Compile Include="Items\Others\NullItem.cs" />
     <Compile Include="Menus\Components\Tabulation.cs" />
     <Compile Include="Menus\LookCommodityItem.cs" />
     <Compile Include="Shop\CommodityItems\Armors\Armor.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Shop\CommodityItems\Necklets\Necklet.cs" />
     <Compile Include="Shop\CommodityItems\Necklets\NeckletOfLife.cs" />
     <Compile Include="Shop\CommodityItems\Others\CrypticOrb.cs" />
+    <Compile Include="Shop\CommodityItems\Others\NullItem.cs" />
     <Compile Include="Shop\CommodityItems\State.cs" />
     <Compile Include="Shop\CommodityItems\Weapons\Blade.cs" />
     <Compile Include="Shop\CommodityItems\Weapons\Club.cs" />
@@ -87,7 +89,7 @@
     <Compile Include="Items\Necklets\NeckletOfLife.cs" />
     <Compile Include="Items\Necklets\Necklet.cs" />
     <Compile Include="Items\Necklets\NullNecklet.cs" />
-    <Compile Include="Items\Other\CrypticOrb.cs" />
+    <Compile Include="Items\Others\CrypticOrb.cs" />
     <Compile Include="Items\Weapons\Blade.cs" />
     <Compile Include="Items\Weapons\Club.cs" />
     <Compile Include="Items\Weapons\IvanHands.cs" />

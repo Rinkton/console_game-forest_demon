@@ -47,7 +47,7 @@ namespace Game.Menus
                         gameEvent = new GameEvents.EquipItem(commodityItem);
                         break;
                     case Game.Shop.CommodityItems.State.Equiped:
-                        gameEvent = new GameEvents.RemoveItem(commodityItem);
+                        gameEvent = new GameEvents.RemoveItemAndEquipDefault(commodityItem);
                         break;
                 }
 

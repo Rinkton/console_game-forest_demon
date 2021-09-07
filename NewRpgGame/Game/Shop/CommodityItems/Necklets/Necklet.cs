@@ -8,14 +8,15 @@ namespace Game.Shop.CommodityItems.Necklets
 {
     abstract class Necklet : Item
     {
-        public override void Equip()
+        public override void Initialize()
         {
-            foreach(Item commodityItem in ImportantObjectsKeeper.StepanStock.Necklets)
-            {
-                IfStateIsEquipedThenRemove(commodityItem);
-            }
+            ItemsByItsType = ImportantObjectsKeeper.StepanStock.Necklets;
+            DefaultItemByItsType = new Items.Necklets.NullNecklet();
+        }
 
-            State = State.Equiped;
+        protected override void PutItemToPlayer(Items.Item item)
+        {
+            ImportantObjectsKeeper.Player.Necklet = (Items.Necklets.Necklet)item;
         }
     }
 }

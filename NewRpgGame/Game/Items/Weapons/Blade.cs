@@ -7,7 +7,7 @@ namespace Game.Items.Weapons
         public Blade()
         {
             Name = TextResources.GetStringByResourceName("blade");
-            Damage = 8;
+            Damage = 18;
         }
     }
 }

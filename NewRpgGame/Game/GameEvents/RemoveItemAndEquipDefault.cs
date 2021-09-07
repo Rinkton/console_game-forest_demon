@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Game.GameEvents
 {
-    class RemoveItem : GameEvent
+    class RemoveItemAndEquipDefault : GameEvent
     {
         /// <param name="args">
         /// 0 - Товар, который необходимо убрать
         /// </param>
-        public RemoveItem(params object[] args) : base(args) { }
+        public RemoveItemAndEquipDefault(params object[] args) : base(args) { }
 
         public override void Run()
         {
             Game.Shop.CommodityItems.Item commodityItem = (Game.Shop.CommodityItems.Item)Args[0];
-            commodityItem.Remove();
+            commodityItem.RemoveAndEquipDefault();
             new Shop().Run();
         }
     }

@@ -8,6 +8,7 @@ namespace Game.Shop
 {
     abstract class Stock
     {
+        #region item types
         public CommodityItems.Weapons.Weapon[] Weapons { get; protected set; }
 
         public CommodityItems.Armors.Armor[] Armors { get; protected set; }
@@ -15,6 +16,7 @@ namespace Game.Shop
         public CommodityItems.Necklets.Necklet[] Necklets { get; protected set; }
 
         public CommodityItems.Item[] Others { get; protected set; }
+        #endregion
 
         public CommodityItems.Item[] GetItems()
         {
@@ -36,6 +38,14 @@ namespace Game.Shop
                 {
                     someCommodityItem.ChangeState(CommodityItems.State.Equiped);
                 }
+            }
+        }
+
+        public void InitializeAll()
+        {
+            foreach(CommodityItems.Item item in GetItems())
+            {
+                item.Initialize();
             }
         }
     }

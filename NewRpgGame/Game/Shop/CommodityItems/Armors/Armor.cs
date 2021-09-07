@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Game.Items;
 
 namespace Game.Shop.CommodityItems.Armors
 {
     abstract class Armor : Item
     {
-        public override void Equip()
+        public override void Initialize()
         {
-            foreach(Item commodityItem in ImportantObjectsKeeper.StepanStock.Armors)
-            {
-                IfStateIsEquipedThenRemove(commodityItem);
-            }
+            ItemsByItsType = ImportantObjectsKeeper.StepanStock.Armors;
+            DefaultItemByItsType = new Items.Armors.IvanRags();
+        }
 
-            State = State.Equiped;
+        protected override void PutItemToPlayer(Items.Item item)
+        {
+            ImportantObjectsKeeper.Player.Armor = (Items.Armors.Armor)item;
         }
     }
 }

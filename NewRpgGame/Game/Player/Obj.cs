@@ -13,6 +13,7 @@ namespace Game.Player
         public Items.Weapons.Weapon Weapon;
         public Items.Armors.Armor Armor;
         public Items.Necklets.Necklet Necklet;
+        public Items.Others.CrypticOrb CrypticOrb;
         public int PunishmentPercent;
         public int Money;
         public int HealingPotionCount;

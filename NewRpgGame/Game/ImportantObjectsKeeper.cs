@@ -9,5 +9,10 @@ namespace Game
         public static Player.Obj Player = new Player.Obj();
 
         public static Shop.StepanStock StepanStock = new Shop.StepanStock();
+
+        static ImportantObjectsKeeper()
+        {
+            StepanStock.InitializeAll();
+        }
     }
 }

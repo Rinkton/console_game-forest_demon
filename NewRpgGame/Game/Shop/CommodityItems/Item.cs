@@ -17,12 +17,21 @@ namespace Game.Shop.CommodityItems
 
         public int Cost { get; protected set; }
 
-        public State State { get; protected set; }
-
         /// <summary>
         /// Как описывает товар купец Степан этот товар
         /// </summary>
         public string StepanDescription { get; protected set; }
+
+        /// <summary>
+        /// Все предметы в магазине такого же типа (смотрите <see cref="Stock"/>)
+        /// </summary>
+        public CommodityItems.Item[] ItemsByItsType { get; protected set; }
+
+        public Items.Item DefaultItemByItsType { get; protected set; }
+
+        public State State;
+
+        public virtual void Initialize() { }
 
         /// <example>Структура наименования строится по принципу: name (properties) - cost монет.
         /// properties здесь могут и не существовать, если предмет не обладает какими либо явными характеристиками.
@@ -65,34 +74,42 @@ namespace Game.Shop.CommodityItems
 
         public void ChangeState(State newState) => State = newState;
 
-        public virtual void Equip()
+        public void Equip()
         {
-            foreach(Item commodityItem in ImportantObjectsKeeper.StepanStock.GetItems())
-            {
-                IfStateIsEquipedThenRemove(commodityItem);
-            }
-
+            clearEquipmentOfItemType();
             State = State.Equiped;
+            PutItemToPlayer(this._Item);
         }
 
-        public void Remove()
+        /// <remarks>
+        /// Default - <see cref="DefaultItemByItsType"/>
+        /// </remarks>
+        public void RemoveAndEquipDefault()
         {
-            State = State.Bought;
+            clearEquipmentOfItemType();
+            PutItemToPlayer(DefaultItemByItsType);
         }
 
         /// <summary>
-        /// 
+        /// Всовывает себя в нужное поле <see cref="Player.Obj"/>
         /// </summary>
-        /// <param name="commodityItem"></param>
-        /// <returns>Is state is <see cref="State.Equiped"/> in this <see cref="Item"/></returns>
-        protected bool IfStateIsEquipedThenRemove(Item commodityItem)
+        protected abstract void PutItemToPlayer(Items.Item item);
+
+        /// <summary>
+        /// Убирает из экипировки все предметы этого типа
+        /// </summary>
+        /// <remarks>
+        /// Item type - посмотрите в <see cref="Stock"/>
+        /// </remarks>
+        private void clearEquipmentOfItemType()
         {
-            if(commodityItem.State == State.Equiped)
+            foreach(CommodityItems.Item commodityItem in ItemsByItsType)
             {
-                commodityItem.Remove();
-                return true;
+                if(commodityItem.State == State.Equiped)
+                {
+                    commodityItem.State = State.Bought;
+                }
             }
-            return false;
         }
     }
 }

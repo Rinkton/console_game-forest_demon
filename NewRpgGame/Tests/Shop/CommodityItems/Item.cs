@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace Tests.Shop.CommodityItems
 {
-    public class Item : Game.Shop.CommodityItems.Item
+    public class Item : Game.Shop.CommodityItems.Others.NullItem
     {
         [Theory]
         [MemberData(nameof(TestData), MemberType = typeof(TestDataProvider))]

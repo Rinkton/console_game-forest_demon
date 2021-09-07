@@ -3,14 +3,15 @@ namespace Game.Shop.CommodityItems.Weapons
 {
     abstract class Weapon : Item
     {
-        public override void Equip()
+        public override void Initialize()
         {
-            foreach(Item commodityItem in ImportantObjectsKeeper.StepanStock.Weapons)
-            {
-                IfStateIsEquipedThenRemove(commodityItem);
-            }
+            ItemsByItsType = ImportantObjectsKeeper.StepanStock.Weapons;
+            DefaultItemByItsType = new Items.Weapons.IvanHands();
+        }
 
-            State = State.Equiped;
+        protected override void PutItemToPlayer(Items.Item item)
+        {
+            ImportantObjectsKeeper.Player.Weapon = (Items.Weapons.Weapon)item;
         }
     }
 }

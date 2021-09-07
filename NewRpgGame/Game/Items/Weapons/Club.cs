@@ -7,7 +7,7 @@ namespace Game.Items.Weapons
         public Club()
         {
             Name = TextResources.GetStringByResourceName("club");
-            Damage = 3;
+            Damage = 13;
         }
     }
 }
