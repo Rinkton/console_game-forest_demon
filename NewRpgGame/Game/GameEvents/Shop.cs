@@ -8,7 +8,6 @@ namespace Game.GameEvents
 {
     class Shop : GameEvent
     {
-        //TODO: Сделать, чтобы при покупке предметы активизировались не только в магазе, но и в статистике Ивана
         public override void Run()
         {
             new Menus.Shop().Run();

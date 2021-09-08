@@ -10,6 +10,8 @@ namespace Game
 
         public static Shop.StepanStock StepanStock = new Shop.StepanStock();
 
+        public static Healer Healer = new Healer();
+
         static ImportantObjectsKeeper()
         {
             StepanStock.InitializeAll();

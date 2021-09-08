@@ -72,3 +72,24 @@ buy cost;Купить(-* монет)
 cancel;Отмена
 not enough money;У вас недостаточно монет!
 you bought commodity item;Вы купили *!
+Console.WriteLine ("");
+			Console.WriteLine ("");
+
+			Console.ForegroundColor = ConsoleColor.Gray;
+			Console.WriteLine ("1) ");
+			Console.WriteLine ("2) ");
+			Console.WriteLine ("3) ");
+pankrat what do you need;Панкрат: Ну, выкладывай, что надо?
+heal me;Вылечи меня (-* монет)
+i want to buy healing potions;Я хочу купить у тебя лечебных зелий
+exit;Выйти
+pankrat about healing potions;Панкрат: Зелья, ты хоть знаешь как мало они стоят и как сложно мне их делать?! Ладно... но только учти, я буду повышать цену на них, чтобы ты не тратил их легкомысленно
+buy healing potion;Купить лечебное зелье
+buy healing potion with cost;Купить лечебное зелье (-* монет)
+pankrat about healing;Панкрат: Бегают тут по лесам, а потом приходят сюда в ссадинах да царапинах. Надоели уже! Ладно, вот, теперь ты абсолютно здоров
+your health is fully restored;Ваше здоровье полностью восстановлено!
+pankrat too low money to heal;Панкрат: Ты читать умеешь? Написано - же на табличке: Стоимость лечения - * монет. Без денег не лечу, убирайся!
+pankrat player already healthy;Панкрат: Не лги, вижу я, здоров ты. Уходи, не трать моё время!
+you bought healing potion;Вы купили лечебное зелье
+pankrat too low money to buy healing potion;Панкрат: У тебя нет нужной суммы денег, зелье я тебе не продам!
+pankrat healing potions ended;Панкрат: Зелья кончились!

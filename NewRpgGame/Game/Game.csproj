@@ -47,11 +47,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameEvents\Buy.cs" />
+    <Compile Include="GameEvents\BuyHealingPotion.cs" />
+    <Compile Include="GameEvents\ReallyBuyHealingPotion.cs" />
     <Compile Include="GameEvents\EquipItem.cs" />
+    <Compile Include="GameEvents\Heal.cs" />
     <Compile Include="GameEvents\LookCommodityItem.cs" />
     <Compile Include="GameEvents\RemoveItemAndEquipDefault.cs" />
+    <Compile Include="Healer.cs" />
     <Compile Include="Items\Others\NullItem.cs" />
+    <Compile Include="Menus\ReallyBuyHealingPotion.cs" />
     <Compile Include="Menus\Components\Tabulation.cs" />
+    <Compile Include="Menus\Healer.cs" />
     <Compile Include="Menus\LookCommodityItem.cs" />
     <Compile Include="Shop\CommodityItems\Armors\Armor.cs" />
     <Compile Include="Shop\CommodityItems\Armors\NormalClothes.cs" />

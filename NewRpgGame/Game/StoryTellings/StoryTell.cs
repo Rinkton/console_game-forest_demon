@@ -8,7 +8,7 @@ namespace Game.StoryTellings
 {
     class StoryTell
     {
-        protected void Run(string resourceGroupName)
+        public void Run(string resourceGroupName)
         {
             string[] strings = IO.TextResources.GetStringsByResourceGroupName(resourceGroupName);
             tell(strings);

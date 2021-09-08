@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Game.GameEvents
 {
-    class Healer : GameEvent
+    class ReallyBuyHealingPotion : GameEvent
     {
         public override void Run()
         {
-            new Menus.Healer().Run();
+            new Menus.ReallyBuyHealingPotion().Run();
         }
     }
 }
